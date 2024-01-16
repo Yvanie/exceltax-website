@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+body.hidden-scrolling{
+    overflow-y: hidden;
+}
+/* home section */
+.header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    color: #ccc;
+    background: #fff;
+    padding: 15px ;
+    color: #000;
+    box-shadow: 0em 0em 0.5em #ccc;
+    border-top: 3px solid #F9BB00;
+}
+.header .header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+.header .logo{
+    padding: 0 40px;
+}
+.header .logo a{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+}
+.header .logo a span{
+    color: #F9BB00;
+}
+.header .nav-menu{
+    padding: 0 50px;
+}
+.header .menu > .menu-item{
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
+.header .menu > .menu-item > a{
+    display: block;
+    font-size: 12px 0;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.header .menu > .menu-item > a .plus{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+    position: relative;
+    pointer-events: none;
+}
+.header .menu > .menu-item > a .plus:before,
+.header .menu > .menu-item > a .plus:after{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+.header .menu > .menu-item:hover > a .plus:before,
+.header .menu > .menu-item:hover > a .plus:after{
+    background-color: #F9BB00;
+}
+.header .menu > .menu-item > a .plus:after{
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+.header .menu > .menu-item > .sub-menu{
+    box-shadow: 0 0 10px rgb(0,0,0,0.2);
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 180%;
+    background-color: #fff;
+    padding: 10px 0;
+    border-top: 3px solid #F9BB00;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+@media (min-width: 992px){
+    .header .menu > .menu-item-has-children:hover > .sub-menu{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    }
+    .header .menu > .menu-item-has-children:hover > a .plus:after{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+.header .menu > .menu-item > .sub-menu > .menu-item{
+    display: block;;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a{
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
+.header .menu > .menu-item:hover > a{
+    color: #F9BB00;
+}
+ .header .open-nav-menu{
+   height: 34px;
+   width: 40px;
+   margin-right: 15px;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+.header .open-nav-menu span{
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: #000;
+    position: relative;
+}
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.header .open-nav-menu span:before{
+    top: -7px;
+}
+.header .open-nav-menu span:after{
+    top: 7px;
+}
+.header .close-nav-menu{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    margin: 0 0 15px 15px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #F9BB00;
+}
+.header .close-nav-menu img{
+    width: 20px;
+}
+.header .menu-overlay{
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform:all 0.3s ease ;
+}
+.header .menu-overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+/* home section */
+
+.home-section{
+    width: 100%;
+   
+   background-image: linear-gradient(#191917, rgba(249, 249, 252, 0.7)),url('http://exceltax.sellfive.com/wp-content/uploads/2023/08/Fiscalite.jpg');
+   background-size: cover;
+   z-index: -1;
+   padding: 13px 60px;
+}
+.home-section .home{
+    height: 100%;
+    opacity: 0.65;
+    padding-top: 150px;
+    width: 60%;
+}
+.home-section .home h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #F9BB00;
+    text-transform: uppercase; 
+    letter-spacing: 0.02rem;
+}
+.home-section .home p{
+     color: #fff;
+     font-size: 25px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     font-weight: 700;
+     letter-spacing: 0.03rem;
+     text-align: justify;
+} 
+.home-section .home .btn-home{
+    /* border: none;
+    background: #fff;
+    color: #000;
+    border-radius: 15%;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px; */
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 2px transparent;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 48px;
+    background-color: #F9BB00;
+    color: #fff; 
+    cursor: pointer;
+    transition: all 0.4s ease-out 0s;
+    z-index: 5;
+}
+.offres-beneficier{
+    padding: 13px 60px;
+}
+.offres-beneficier .offres{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.confiance{
+    padding: 13px 60px;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    
+}
+.confiance .confiance-text h2{
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.confiance .confiance-text p{
+    font-size: 20px;
+    letter-spacing: 0.01rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.confiance .confiance-text .btn-confiance{
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 2px transparent;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 48px;
+    background-color: #F9BB00;
+    color: #fff; 
+    cursor: pointer;
+    transition: all 0.4s ease-out 0s;
+    z-index: 5;
+}
+.confiance .confiance-img img{
+    width: 500px;
+}
+.Services{
+    padding: 13px 60px;
+    margin-top: 70px;
+}
+.Services h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.module-exceltax{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.module-exceltax .module-card{
+    width: 325px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 10px;
+    transition: transform 0.6s ease;
+}
+.module-exceltax .module-card:hover{
+    transform: translateY(-20px);
+}
+.module-exceltax .module-card img{
+    max-width: 100%;
+    height: auto;
+}
+.module-exceltax .module-card .module-content{
+    padding: 16px;
+}
+.module-exceltax .module-card .module-content h3{
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+.module-exceltax .module-card .module-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.module-exceltax .module-card .module-content .cutoff-text{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.module-exceltax .module-card .module-content .btn-module{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #F9BB00;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+.importance-exceltax{
+    padding: 13px 60px;
+    background: #f0f0f0;
+}
+.importance-exceltax p{
+    color: #666;
+    line-height: 1.3;
+    font-size: 20px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     font-weight: 700;
+     letter-spacing: 0.03rem;
+     text-align: justify;    
+}
+.importance-exceltax #ch{
+    display: none;
+}
+.importance-exceltax #ch:checked ~ label{
+    display: none;
+}
+.importance-exceltax #ch:checked ~ .content {
+    display: block;
+}
+.importance-exceltax label{
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #F9BB00;
+    color: #fff;  
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;    
+}
+.importance-exceltax .content{
+    display: none;
+}
+.exceltax-description{
+    padding: 13px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.exceltax-description .description{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    box-shadow: 0 0 1em 1px;
+    padding: 15px;
+}
+.exceltax-description .description p{
+    letter-spacing: 1px;
+}
+.exceltax-description .description .left{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.exceltax-description .description .right{
+    width: 1000px;
+}
+.exceltax-objective{
+    padding: 13px 60px;
+}
+.exceltax-objective p{
+    padding-top: 50px;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.exceltax-objective li{
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+}
+.exceltax-objective li:not(:last-child){
+    margin-bottom: 15px;
+}
+.exceltax-objective li:before{
+    content: "\25BA";
+    color: #F9BB00;
+    margin-right: 10px;
+}
+.contact-us{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:url("img/contact-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.contact-us .contact-content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact-us .contact-content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.contact-us .contact-content p{
+    font-weight: 300;
+    color: #fff;
+}
+.contact-us .class-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contact-us .class-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-us .class-container .contactInfo .box{
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+}
+.contact-us .class-container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #F9BB00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+}
+.contact-us .class-container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight:300 ;
+}
+.contact-us .class-container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #F9BB00;
+}
+.contact-us .class-container .contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contact-us .class-container .contactForm h2{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+}
+.contact-us .class-container .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contact-us .class-container .contactForm .inputBox textarea,
+.contact-us .class-container .contactForm .inputBox input{
+    width: 100%;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    resize: none;
+}
+.contact-us .class-container .contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contact-us .class-container .contactForm .inputBox textarea:focus ~ span,
+.contact-us .class-container .contactForm .inputBox input:focus ~ span{
+    color: #F9BB00;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contact-us .class-container .contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #F9BB00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+/* footer section */
+footer{
+    width: 100%;
+    bottom: 0;
+    background: #222222;
+    color: #fff;
+    padding: 5px 0 15px;
+   font-size: 13px;
+   line-height: 20px;
+}
+footer .row{
+    width: 90%;
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .col:nth-child(3){
+    flex-basis: 15%;
+}
+footer .col .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;  
+   
+}
+footer .col .mission{
+    margin-top: 20px;
+}
+footer .col .logo span{
+    color: #F9BB00;
+}
+footer .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    
+  /*   background-color: #F9BB00;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    text-transform: uppercase; */
+}
+footer .col .underline{
+    width: 100%;
+    height: 5px;
+    background: #F9BB00;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+footer .col .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100px;
+    }
+}
+footer .col ul li{
+    list-style: none;
+    margin-bottom: 7px;
+}
+footer .col a,
+footer .col ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer .col form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+footer .col form .fa-envelope{
+    font-size: 18px;
+    margin-right: 10px;
+}
+footer .col form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+footer .col form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+footer .col form .fa-arrow-right{ 
+    font-size: 16px;
+    color: #ccc;
+}
+footer .col .social-icons .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+footer .col .social-icons i:hover{
+    background: #F9BB00;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.copyright .email{
+    color: #F9BB00;
+}
+
+/* Responsiveness */
+@media (max-width:1992px){
+    .exceltax-description .description .left{
+        font-size: 20px;
+    }
+    .exceltax-description .description .right{
+        width:800px;
+    }
+}
+@media (max-width:991px){
+    .header .nav-menu{
+        position: fixed;
+        right: -280px;
+        visibility: hidden;
+       /*  right: -280px;
+        visibility: hidden;  to put the menu in left side*/
+        width: 280px;
+        height: 100%;
+        top: 0;
+        overflow-y: auto;
+        background-color: #222222;
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all 0.5s ease;
+    }
+    .header .nav-menu.open{
+        visibility: visible;
+        right: 0px;
+    }
+    .header .menu > .menu-item{
+        display: block;
+        margin: 0;
+    }
+    .header .menu > .menu-item-has-children > a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .menu > .menu-item:first-child > a{
+        border-top: 1px solid #333333;
+    }
+    .header .menu > .menu-item > a{
+        color: #fff;
+        padding: 12px 15px;
+        border-bottom: 1px solid #333333;
+     
+    }
+    .header .menu > .menu-item > a .plus:before,
+    .header .menu > .menu-item > a .plus:after{
+        background-color: #fff; 
+    }
+    .header .menu > .menu-item-has-children.active > a .plus:after{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    .header .menu > .menu-item > .sub-menu{
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        transform: translateY(0px);
+        padding: 0px;
+        left: auto;
+        top: auto;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .header .menu > .menu-item > .sub-menu > .menu-item > a{
+        padding:12px 45px;
+        color: #ffffff;
+        border-bottom: 1px solid #333333;
+    }
+    .header .close-nav-menu,
+    .header .open-nav-menu{
+        display: flex;
+    }
+    .home-section{
+        min-height: 0vh;
+    }
+    .home-section .home {
+        width: 100%;
+      }
+      .home-section .home h2 {
+        font-size: 35px;
+        text-align: center;
+      }
+    .confiance {
+        flex-direction: column;
+    }
+    .confiance .confiance-text h2 {
+        font-size: 35px;
+      }
+     .confiance .confiance-img img {
+
+        margin-top: 30px;
+      } 
+    .exceltax-description .description{
+        display: flex;
+        flex-direction: column;
+    }
+    .exceltax-description .description .right{
+        width:auto;
+        margin-top:15px;
+    }
+    .contact-us{
+        padding: 50px;
+    }
+    .contact-us .class-container{
+        flex-direction: column;
+    }
+    .contact-us .class-container .contactInfo{
+       margin-bottom: 40px;
+    }
+    .contact-us .class-container .contactInfo,
+    .contact-us .class-container .contactForm{
+        width: 100%;
+    }
+    
+    
+}
+
+@media (max-width:740px){
+    footer{
+        bottom: unset;
+    }
+    footer .col{
+        flex-basis: 100%;
+    }
+    footer .col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+@media (max-width:550px){
+    .confiance .confiance-img img {
+        width: 400px;
+        margin-top: 30px;
+      } 
+      .home-section .home h2{
+        font-size: 30px;
+      }
+}
