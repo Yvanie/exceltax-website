@@ -1,0 +1,231 @@
+
+.logi-container{
+   padding: 13px 60px;
+}
+.logi-container .logi-description{
+    height: 100%;
+    opacity: 0.65;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logi-description .logi_heading{
+    width: 200%;
+    margin: 2rem;
+}
+.logi-description .logi_heading h2{
+    font-size: 3rem;
+}
+.logi-description .logi_heading span{
+    letter-spacing: 0.04rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: justify;
+}
+.logi-description .logi_heading p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+
+.logi-description .logi_heading .btn1{
+    color: #fff;
+    background-color: #F9BB00;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    border-radius: 5rem;
+    border: none;
+}
+.logi-description .logi_list{
+    width: 90%;
+}
+.logi-description .logi_list .list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logi-description .logi_list .list .list_icons {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    background-color: #F9BB00;
+    color: #fff;
+    border-radius: 5rem;
+}
+.logi-description .logi_list .list .list_name{
+    margin-left: 1rem;
+}
+.logi-description .logi_list .list .list_name h4{
+    font-size: 1.5rem;
+}
+.logi-description .logi_list .list .list_name p{
+   /*  color: #7f8c8d; */
+    padding-top: 0.8rem;
+    text-align: justify;
+}
+.img-exceltax{
+    padding: 13px 60px;
+    background: #f0f0f0;
+    display: flex;
+}
+.img-exceltax .img-gallery{
+    padding: 0 6px;
+  
+}
+.img-exceltax .img-gallery .gallery{
+    border: 1px solid #ccc;
+}
+.img-exceltax .img-gallery .gallery img{
+    width: 380px;
+}
+.img-exceltax .img-gallery .des{
+    padding: 15px;
+    text-align: center;
+}
+.letter{
+    padding: 13px 60px;
+    padding-top: 50px;
+    background-image: url("https://www.exceltax.org/exceltax/Nouveau%20dossier/assets/images/background3.jpg");
+}
+.letter-des h1{
+    text-align: center;
+    font-size: 40px;
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    padding-bottom: 20px;
+}
+.letter .letter-des{
+    background: #fff;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+    padding: 20px;
+}
+.letter-description p{
+    text-align: justify;
+}
+.letter .heading{
+    display: flex;
+    justify-content: space-between;
+}
+.letter .heading p{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.exceltax-question{
+    padding: 13px 60px;
+}
+.exceltax-question .container{
+    position: relative;
+   
+}
+.exceltax-question .container .accordion{
+    position: relative;
+    margin: 40px;
+}
+.exceltax-question .container h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding-top: 40px;
+ }
+ .exceltax-question .container .content-accordion{
+    margin-top: 35px;
+ }
+ .exceltax-question .container .content-accordion .question{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+ }
+
+ .exceltax-question .container .content-accordion .question .title-question{
+    margin: 1.4rem 0rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-weight: bolder;
+ }
+ .exceltax-question .container .content-accordion .question .question-btn{
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+ }
+ .exceltax-question .container .content-accordion .question .question-btn .up-icon{
+    display: none;
+ }
+ .answer{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    display: none;
+ }
+ .answer p{
+    font-size: 15px;
+ }
+ .up-icon,
+ .down-icon{
+    color: #F9BB00;
+ }
+.exceltax-question .container .accordion .accordion-img{
+    position: relative;
+    width: 320px;
+}
+.show-text .answer{
+    display: block;
+}
+.show-text .up-icon{
+    display: inline;
+    color: #F9BB00;
+}
+
+@media (max-width:1276px){
+    .logi-description .logi_heading h2{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:1000px){
+.logi-container .logi-description{
+    flex-direction: column;
+}
+.logi-description .logi_heading{
+    width: 100%;
+    margin: 2rem;
+}
+.logi-description .logi_heading h2{
+    font-size: 2.5rem;
+}
+.img-exceltax .img-gallery .gallery img{
+    width:250px;
+   
+}
+}
+/* @media screen and (min-width:992px){
+    .exceltax-question .container .accordion{
+        width: 920px;
+        height: 0;
+    }
+} */
+@media (max-width:864px){
+    .img-exceltax .img-gallery .gallery img{
+        width:200px;
+    }
+
+}
+@media (max-width:714px){
+    .img-exceltax{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .img-exceltax .img-gallery .gallery img{
+        width:100%;
+        
+    }
+}
+
+

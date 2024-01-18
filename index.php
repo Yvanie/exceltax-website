@@ -30,34 +30,34 @@
                         <img src="img/close.png" alt="">
                     </div>
                     <ul class="menu">
-                        <li class="menu-item"><a href="#">Acceuil</a></li>
+                        <li class="menu-item"><a href="index.php">Acceuil</a></li>
                         <li class="menu-item menu-item-has-children"><a href="#" data-toggle="sub-menu">A propos<i
                                     class="plus"></i></a>
                             <ul class="sub-menu">
-                                <li class="menu-item"><a href="#">Maitre Doeuvre</a></li>
-                                <li class="menu-item"><a href="#">Services aux PME</a></li>
-                                <li class="menu-item"><a href="#">Approche et Valeurs</a></li>
-                                <li class="menu-item"><a href="#">Intervenants</a></li>
-                                <li class="menu-item"><a href="#">Poles de Gestion</a></li>
+                                <li class="menu-item"><a href="maitreDoeuvre.php">Maitre Doeuvre</a></li>
+                                <li class="menu-item"><a href="service.php">Services aux PME</a></li>
+                                <li class="menu-item"><a href="approcheValeurs.php">Approche et Valeurs</a></li>
+                                <li class="menu-item"><a href="intervenants.php">Intervenants</a></li>
+                                <li class="menu-item"><a href="gestion.php">Poles de Gestion</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">EDU</a></li>
-                        <li class="menu-item"><a href="#">LOGI</a></li>
-                        <li class="menu-item"><a href="#">Teleprocedure</a></li>
-                        <li class="menu-item menu-item-has-children"><a href="#" data-toggle="sub-menu">Conseil<i
+                        <li class="menu-item"><a href="edu.php">EDU</a></li>
+                        <li class="menu-item"><a href="logi.php">LOGI</a></li>
+                        <li class="menu-item"><a href="teleprocedure.php">Teleprocedure</a></li>
+                        <li class="menu-item menu-item-has-children"><a href="conseil.php" data-toggle="sub-menu">Conseil<i
                                     class="plus"></i></a>
                             <ul class="sub-menu">
-                                <li class="menu-item"><a href="#">Fisc</a></li>
-                                <li class="menu-item"><a href="#">Compta</a></li>
-                                <li class="menu-item"><a href="#">Social</a></li>
-                                <li class="menu-item"><a href="#">DSF</a></li>
-                                <li class="menu-item"><a href="#">FiscoComptable</a></li>
-                                <li class="menu-item"><a href="#">Recouv</a></li>
-                                <li class="menu-item"><a href="#">NPGI</a></li>
+                                <li class="menu-item"><a href="fisc.php">Fisc</a></li>
+                                <li class="menu-item"><a href="compta.php">Compta</a></li>
+                                <li class="menu-item"><a href="social.php">Social</a></li>
+                                <li class="menu-item"><a href="dsf.php">DSF</a></li>
+                                <li class="menu-item"><a href="fiscoComptable.php">FiscoComptable</a></li>
+                                <li class="menu-item"><a href="recouv.php">Recouv</a></li>
+                                <li class="menu-item"><a href="npgi.php">NPGI</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Zoom</a></li>
-                        <li class="menu-item"><a href="#">eService</a></li>
+                        <li class="menu-item"><a href="zoom.php">Zoom</a></li>
+                        <li class="menu-item"><a href="eService.php">eService</a></li>
 
                     </ul>
                 </nav>
@@ -65,7 +65,6 @@
             </div>
         </div>
     </header>
-
     <!-- header end -->
     <!-- body-->
     <section class="home-section">

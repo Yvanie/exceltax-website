@@ -1,0 +1,23 @@
+.compta-container{
+    padding: 13px 60px;
+ }
+ .compta-container .compta-home{
+     height: 100%;
+     padding-top: 100px;
+ }
+  .compta-container .compta-home h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding-top: 40px;
+
+ }
+ .compta-container .compta-home p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}

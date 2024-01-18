@@ -1,0 +1,131 @@
+.intervenants-container{
+    padding: 13px 60px;
+ }
+ .intervenants-container .intervenants{
+     height: 100%;
+     padding-top: 100px;
+ }
+ .intervenants-container .intervenants h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding-top: 40px;
+ }
+ .intervenants-container .intervenants p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+.leaders{
+    padding: 13px 60px;
+    background:#f0f0f0;
+
+}
+.leaders .leaderClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leaders .leaderClass img{
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    margin-right: 30px;
+}
+.leaders .leaderClass .text h3{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.leaders .leaderClass .text p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+.leaders .leaderClass1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leaders .leaderClass1 img{
+    max-width: 350px;
+    float: left;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    margin-left: 30px;
+}
+.leaders .leaderClass1 .text h3{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.leaders .leaderClass1 .text p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+.informations{
+    padding: 13px 60px;
+}
+.informations .inforInter p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+.informations .inforInter li{
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 0.03rem;
+}
+.informations .inforInter li:not(:last-child){
+    margin-bottom: 10px;
+}
+.informations .inforInter li:before{
+    content: "\25BA";
+    color: #F9BB00;
+    margin-right: 10px;
+}
+
+@media (max-width:991px){
+    .leaders .leaderClass
+    {
+        display: flex;
+       flex-direction: column;
+    }
+    .leaders .leaderClass1{
+        flex-direction: column-reverse;
+    }
+    .leaders .leaderClass img{
+        width: 250px;
+        margin-left: 20px;
+    }
+    .leaders .leaderClass1 img{
+        width: 250px;
+        margin-right: 50px;
+    }
+}
+@media (max-width:410px){
+    .intervenants-container{
+        padding: 6px 30px;
+     }
+    .intervenants-container .intervenants h1{
+        font-size: 25px;
+     }
+    .leaders .leaderClass img{
+        width: 200px;
+    }
+    .leaders .leaderClass1 img{
+        width: 200px;
+    }
+}

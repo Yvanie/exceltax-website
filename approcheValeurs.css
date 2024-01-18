@@ -1,0 +1,37 @@
+.approche-container{
+    padding: 13px 60px;
+ }
+ .approche-container .approche-text{
+     height: 100%;
+     padding-top: 100px;
+     line-height: 1.3;
+ }
+ .approche-container .approche-text h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding-top: 40px;
+
+ }
+ .approche-container .approche-text p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+}
+.approche-container .approche-text  li{
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 0.03rem;
+}
+.approche-container .approche-text li:not(:last-child){
+    margin-bottom: 10px;
+}
+.approche-container .approche-text li:before{
+    content: "\25BA";
+    color: #F9BB00;
+    margin-right: 10px;
+}

@@ -395,7 +395,6 @@ body.hidden-scrolling{
     padding-top: 50px;
 }
 .exceltax-description .description{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,6 +459,7 @@ body.hidden-scrolling{
 .contact-us .contact-content p{
     font-weight: 300;
     color: #fff;
+    margin-top: 15px;
 }
 .contact-us .class-container{
     width: 100%;

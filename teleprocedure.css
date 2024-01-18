@@ -1,0 +1,9 @@
+.maitreDoeuvre-container{
+    padding: 13px 60px;
+ }
+ .maitreDoeuvre-container .text{
+     height: 100%;
+     padding-top: 100px;
+     line-height: 1.3;
+ }
+
